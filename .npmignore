@@ -1,0 +1,41 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Testing
+coverage/
+.nyc_output/
+
+# Source files (only dist/ is needed for NPM)
+scripts/
+test/
+test-fixtures/
+vitest.config.ts
+tsconfig.json
+
+# Config (example is included, actual config is user-specific)
+dida365.config.example.json
+
+# Git
+.git/
+.gitignore
+
+# Temporary
+*.tmp
+*.temp

@@ -1,0 +1,87 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://dida365-cli/config/dida365.schema.json",
+  "title": "Dida365 CLI Configuration",
+  "description": "Configuration schema for Dida365 CLI",
+  "type": "object",
+  "properties": {
+    "token": {
+      "type": "string",
+      "description": "OAuth access token for Dida365 API"
+    },
+    "baseUrl": {
+      "type": "string",
+      "format": "uri",
+      "default": "https://api.dida365.com/open/v1",
+      "description": "Base URL for Dida365 API"
+    },
+    "timeoutMs": {
+      "type": "integer",
+      "minimum": 1000,
+      "maximum": 60000,
+      "default": 15000,
+      "description": "Request timeout in milliseconds"
+    },
+    "retries": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 10,
+      "default": 3,
+      "description": "Number of retries for failed requests"
+    },
+    "cacheDir": {
+      "type": "string",
+      "description": "Directory for caching API responses"
+    },
+    "cacheTtlSeconds": {
+      "type": "integer",
+      "minimum": 60,
+      "default": 300,
+      "description": "Cache TTL in seconds"
+    },
+    "cacheStaleIfErrorSeconds": {
+      "type": "integer",
+      "minimum": 0,
+      "default": 86400,
+      "description": "Serve stale cache on error for N seconds"
+    },
+    "oauth": {
+      "type": "object",
+      "description": "OAuth configuration",
+      "properties": {
+        "clientId": {
+          "type": "string",
+          "description": "OAuth client ID"
+        },
+        "clientSecret": {
+          "type": "string",
+          "description": "OAuth client secret"
+        },
+        "authorizeUrl": {
+          "type": "string",
+          "format": "uri",
+          "default": "https://dida365.com/oauth/authorize",
+          "description": "OAuth authorization URL"
+        },
+        "tokenUrl": {
+          "type": "string",
+          "format": "uri",
+          "default": "https://dida365.com/oauth/token",
+          "description": "OAuth token exchange URL"
+        },
+        "redirectUri": {
+          "type": "string",
+          "format": "uri",
+          "description": "OAuth callback URL"
+        },
+        "scope": {
+          "type": "string",
+          "description": "OAuth scope"
+        }
+      },
+      "required": ["clientId", "authorizeUrl", "tokenUrl", "redirectUri"]
+    }
+  },
+  "required": [],
+  "additionalProperties": false
+}

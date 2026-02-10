@@ -1,0 +1,25 @@
+# dependencies
+node_modules/
+
+# build output
+dist/
+
+# test/coverage
+coverage/
+.nyc_output/
+
+# logs
+*.log
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+
+# env
+.env
+.env.*
+
+# Local config / secrets (do not commit)
+dida365.config.json
+*.tgz

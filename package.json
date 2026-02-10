@@ -1,0 +1,49 @@
+{
+  "name": "dida365-cli",
+  "version": "1.0.0",
+  "description": "Dida365/TickTick CLI tool - Create, update, complete, and list tasks from command line",
+  "type": "module",
+  "main": "./dist/dida365/cli.js",
+  "bin": {
+    "dida365": "./dist/dida365/cli.js"
+  },
+  "files": [
+    "dist/",
+    "config/",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/benj-tang/dida365-cli"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:ui": "vitest ui",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "dida365",
+    "ticktick",
+    "cli",
+    "task-manager"
+  ],
+  "author": "Benjamin Tang",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^12.0.0",
+    "open": "^10.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@vitest/coverage-v8": "^1.0.0",
+    "typescript": "^5.3.0",
+    "vitest": "^1.0.0"
+  }
+}
